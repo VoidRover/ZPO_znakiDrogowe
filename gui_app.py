@@ -4,8 +4,7 @@ from tkinter import filedialog, messagebox
 from PIL import Image, ImageTk
 import os
 """
-Zmienna EXE jest używana ponieważ GUI uruchamia pythona Windows, a nie pythona z PyCharma.
-Aby wrócić trzeba tylko zmnienić zmienną EXE na odpowiednią ścieżke python.
+Zmienna EXE jest używana aby wstawić własną ścieżkę pythona.
 """
 MODEL_PATH = "runs/detect/train2/weights/best.pt"
 OUTPUT_DIR = "./inference_output"
