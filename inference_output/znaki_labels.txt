@@ -1,0 +1,5 @@
+0 - A-30_inne_nbzp
+1 - B-5_zakaz_ciezarowych
+2 - B-36_zakaz_zatrzymywania
+3 - B-33_ogr_predkosci
+4 - A-12b_zwezenie_prawostronne
