@@ -7,10 +7,13 @@ from sklearn.model_selection import train_test_split
 
 """
 Użycie:
-1.python Main.py --voc_dir "./sign_pics" --out_dir "./yolo_dataset"
-2.python Train.py --data ./yolo_dataset/data.yaml --model yolov8n.pt --epochs 20 --imgsz 640 --batch 16
+1. Przygotowanie danych "Pascal VOC" na trening
+python Main.py --voc_dir "./sign_pics" --out_dir "./yolo_dataset"
+2. Trening na podstawie przygotowanych danych
+python Train.py --data ./yolo_dataset/data.yaml --model yolov8n.pt --epochs 20 --imgsz 640 --batch 16
 yolo train model=yolov8n.pt data=yolo_dataset/data.yaml imgsz=640 batch=16 epochs=20
-3.python Infer_Crop.py --model runs/detect/train2/weights/best.pt --image ./sign.jpg --out ./inference_output
+3. Użycie wytrenowanego systemu na wybranym obrazie
+python Infer_Crop.py --model runs/detect/train2/weights/best.pt --image ./sign.jpg --out ./inference_output
 yolo predict model=runs/detect/train2/weights/best.pt source="obraz.jpg" save=True
 """
 def voc_to_yolo_bbox(bbox, img_w, img_h):
